@@ -10,5 +10,12 @@
 
     <Grid>
         <Label Content="Hello"></Label>
+
+        <Button Width="300" Height="100">
+            <StackPanel>
+                <Image Source="Images/order.png" Width="50" />
+                <TextBlock>Disconnect from Server</TextBlock>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>
