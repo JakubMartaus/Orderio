@@ -16,16 +16,18 @@ using System.Windows.Shapes;
 namespace Orderio
 {
     /// <summary>
-    /// Interakční logika pro MainWindow.xaml
+    /// Interakční logika pro LoginPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Page
     {
-        public MainWindow()
+        public LoginPage()
         {
             InitializeComponent();
-            ChangeContent.Content = new LoginPage();
         }
 
-    
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new UserPage());
+        }
     }
 }
