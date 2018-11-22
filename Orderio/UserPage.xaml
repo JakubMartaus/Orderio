@@ -9,13 +9,36 @@
       Title="UserPage">
 
     <Grid>
-        <Label Content="Hello"></Label>
-
-        <Button Width="300" Height="100">
-            <StackPanel>
-                <Image Source="Images/order.png" Width="50" />
-                <TextBlock>Disconnect from Server</TextBlock>
-            </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Background="#D60202" ></Label>
+        <Button Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="70" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+            <Image Source="Images/arrow.png" Width="40" />
         </Button>
+
+        <Button
+                Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                Width="350"
+                ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                Cursor="Hand" Grid.Row="5"  Height="50"   FontSize="36"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Source="Images/user.png" Width="40"></Image>
+                <Label Content="User Settings"></Label>
+            </Grid>
+        </Button>
+
+
     </Grid>
 </Page>
