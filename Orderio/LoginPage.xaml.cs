@@ -23,11 +23,20 @@ namespace Orderio
         public LoginPage()
         {
             InitializeComponent();
-        }
 
+        }
+        string jmeno = "martaja15";
+        string heslo = "orderio123";
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new UserPage());
+            if (username.Text == jmeno && password.Text == heslo)
+            {
+                this.NavigationService.Navigate(new UserPage());
+            }
+            else
+            {
+                MessageBox.Show("Wrong name or password!");
+            }
         }
     }
 }

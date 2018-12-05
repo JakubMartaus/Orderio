@@ -16,5 +16,7 @@
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
         <Frame NavigationUIVisibility="Hidden" x:Name="ChangeContent" Width="1280" Height="720"></Frame>
+        
+        
     </Grid>
 </Window>

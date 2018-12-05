@@ -22,8 +22,8 @@
         <Label Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="/Orderio;component/Fonts/#Aqua Grotesque" Content="Orderio" FontSize="72" Background="{x:Null}" Foreground="#FF474B48"/>
         <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Username:" Width="350" Height="50" FontSize="20" />
         <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Password:" Width="350" Height="50" FontSize="20" />
-        <TextBox Grid.Row="3" VerticalAlignment="Bottom" Width="350" Height="50" HorizontalAlignment="Center" TextOptions.TextFormattingMode="Display" FontSize="36"  ></TextBox>
-        <TextBox Grid.Row="4" VerticalAlignment="Bottom" Width="350" Height="50" FontSize="34" ></TextBox>
+        <TextBox x:Name="username" Grid.Row="3" VerticalAlignment="Bottom" Width="350" Height="50" HorizontalAlignment="Center" TextOptions.TextFormattingMode="Display" FontSize="36"  ></TextBox>
+        <TextBox x:Name="password" Grid.Row="4" VerticalAlignment="Bottom" Width="350" Height="50" FontSize="34" ></TextBox>
 
         <Button
                 Style="{StaticResource MaterialDesignRaisedAccentButton}"
@@ -32,6 +32,6 @@
                 Cursor="Hand" Grid.Row="5"  Height="50" Content="Sign in"  FontSize="36"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click" 
                 />
         
-   
+            
     </Grid>
 </Page>
