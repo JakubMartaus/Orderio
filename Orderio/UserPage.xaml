@@ -35,7 +35,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Image Grid.Column="0" Source="Images/user.png" Width="40"></Image>
-                <Label Content="User Settings"></Label>
+                <Label Content="Users Settings"></Label>
             </Grid>
         </Button>
 
