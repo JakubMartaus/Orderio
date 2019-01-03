@@ -23,7 +23,7 @@
         <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Username:" Width="350" Height="50" FontSize="20" />
         <Label Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Password:" Width="350" Height="50" FontSize="20" />
         <TextBox x:Name="username" Grid.Row="3" VerticalAlignment="Bottom" Width="350" Height="50" HorizontalAlignment="Center" TextOptions.TextFormattingMode="Display" FontSize="36"  ></TextBox>
-        <TextBox x:Name="password" Grid.Row="4" VerticalAlignment="Bottom" Width="350" Height="50" FontSize="34" ></TextBox>
+        <PasswordBox x:Name="password" Grid.Row="4" VerticalAlignment="Bottom" Width="350" Height="50" FontSize="34" ></PasswordBox>
 
         <Button
                 Style="{StaticResource MaterialDesignRaisedAccentButton}"

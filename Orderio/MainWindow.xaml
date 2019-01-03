@@ -15,7 +15,7 @@
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}">
     <Grid>
-        <Frame NavigationUIVisibility="Hidden" x:Name="ChangeContent" Width="1280" Height="720"></Frame>
+        <Frame NavigationUIVisibility="Hidden" x:Name="ChangeContent" Width="Auto" Height="Auto"></Frame>
         
         
     </Grid>

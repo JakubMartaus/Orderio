@@ -29,7 +29,7 @@ namespace Orderio
         string heslo = "orderio123";
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (username.Text == jmeno && password.Text == heslo)
+            if (username.Text == jmeno && password.Password == heslo)
             {
                 this.NavigationService.Navigate(new UserPage());
             }

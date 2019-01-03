@@ -14,30 +14,52 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+       
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Background="#D60202" ></Label>
-        <Button Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="70" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Height="100" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="#D60202" >
+           
+        </Label>
+        <Button Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
             <Image Source="Images/arrow.png" Width="40" />
         </Button>
+
+
 
         <Button
                 Style="{StaticResource MaterialDesignRaisedAccentButton}"
                 Width="350"
                 ToolTip="Resource name: MaterialDesignRaisedAccentButton"
-                Cursor="Hand" Grid.Row="5"  Height="50"   FontSize="36"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click">
+                Cursor="Hand" Grid.Row="1"  Grid.Column="0" Height="150"   FontSize="34"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="Images/user.png" Width="40"></Image>
-                <Label Content="Users Settings"></Label>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="Images/list.png" Width="40"></Image>
+                <Label Grid.Row="1"  Content="Objednávky" Foreground="White" FontFamily="Arial"></Label>
             </Grid>
         </Button>
+        
+        
+        <Button
+                Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                Width="350"
+                ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                Cursor="Hand" Grid.Row="1"  Grid.Column="1" Height="150"   FontSize="34"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="Images/user.png" Width="40"></Image>
+                <Label Grid.Row="1"   Content="Profil" Foreground="White" FontFamily="Arial"> </Label>
+            </Grid>
+        </Button>
+
 
 
     </Grid>
