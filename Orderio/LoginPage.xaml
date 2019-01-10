@@ -31,7 +31,7 @@
                 ToolTip="Resource name: MaterialDesignRaisedAccentButton"
                 Cursor="Hand" Grid.Row="5"  Height="50" Content="Sign in"  FontSize="36"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click" 
                 />
-        
+        <TextBlock PreviewMouseDown="Registrace_Clicked" FontFamily="/Orderio;component/Fonts/#Aqua Grotesque" Cursor="Hand"  FontSize="18" Foreground="Blue" TextDecorations="Underline"  Grid.Row="6" VerticalAlignment="Top" HorizontalAlignment="Center" >Registrace</TextBlock>
             
     </Grid>
 </Page>

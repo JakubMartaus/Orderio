@@ -38,5 +38,10 @@ namespace Orderio
                 MessageBox.Show("Wrong name or password!");
             }
         }
+        private void Registrace_Clicked(object sender, MouseButtonEventArgs e)
+        {
+
+            this.NavigationService.Navigate(new RegistrationPage());
+        }
     }
 }
