@@ -35,7 +35,7 @@
                 Style="{StaticResource MaterialDesignRaisedAccentButton}"
                 Width="350"
                 ToolTip="Resource name: MaterialDesignRaisedAccentButton"
-                Cursor="Hand" Grid.Row="6"  Height="50" Content="Sign up"  FontSize="36"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click"  
+                Cursor="Hand" Grid.Row="6"  Height="50" Content="Sign up"  FontSize="36"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click" 
                 />
         </Grid>
 </Page>
