@@ -29,5 +29,10 @@ namespace Orderio
         {
             this.NavigationService.Navigate(new LoginPage());
         }
+
+        private void Nakup_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new ShopPage());
+        }
     }
 }

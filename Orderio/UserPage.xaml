@@ -60,6 +60,24 @@
             </Grid>
         </Button>
 
+        <Button
+                x:Name="nakup"
+                Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                Width="350"
+                ToolTip="Resource name: MaterialDesignRaisedAccentButton"
+                Cursor="Hand" Grid.Row="2"  Grid.Column="0" Height="150"   FontSize="34"  Foreground="White" FontFamily="Myriad Pro" Click="Nakup_Click" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="Images/shopping.png" Width="45"></Image>
+                <Label Grid.Row="1"   Content="Nákup" Foreground="White" FontFamily="Arial"></Label>
+            </Grid>
+        </Button>
+
+
+
 
 
     </Grid>
