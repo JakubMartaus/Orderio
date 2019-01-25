@@ -20,10 +20,15 @@ namespace Orderio
     /// </summary>
     public partial class UserPage : Page
     {
+       
         public UserPage()
         {
             InitializeComponent();
+            
+           
+       
         }
+     
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -33,6 +38,11 @@ namespace Orderio
         private void Nakup_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new ShopPage());
+        }
+
+        private void Objednavky_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new OrderPage());
         }
     }
 }

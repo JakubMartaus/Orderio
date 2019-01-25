@@ -22,11 +22,14 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#D60202"></Label>
+        <Label VerticalAlignment="Top"  Height="100" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#D60202"></Label>
+        <Button Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Height="40" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Button_Click">
+            <Image Source="Images/arrow.png" Width="40" />
+        </Button>
         <Label Grid.Row="1" Grid.Column="0" Content="Obchod" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/Orderio;component/Fonts/#Aqua Grotesque" FontSize="36"></Label>
         <Label Grid.Row="1" Grid.Column="1" Content="Sklad" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="/Orderio;component/Fonts/#Aqua Grotesque" FontSize="36"></Label>
        
-        <ListView  Grid.Column="0" Grid.Row="2" Grid.RowSpan="4" x:Name="ProduktList"  >
+        <ListView MouseDoubleClick="ProduktList_MouseDoubleClick"  Grid.Column="0" Grid.Row="2" Grid.RowSpan="3" x:Name="ProduktList"  >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Produkt" DisplayMemberBinding="{Binding Name}"/>
@@ -36,14 +39,15 @@
             </ListView.View>
         </ListView>
 
-        <ListView  Grid.Column="1" Grid.Row="2" Grid.RowSpan="4" x:Name="SkladList" >
+        <ListView  Grid.Column="1" Grid.Row="2" Grid.RowSpan="3" x:Name="SkladList" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Produkt" DisplayMemberBinding="{Binding Birthdate}"/>
-                    <GridViewColumn Header="Počet v ks" DisplayMemberBinding="{Binding Gender}"/>
+                    <GridViewColumn Header="Produkt" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Cena" DisplayMemberBinding="{Binding Price}"/>
 
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="koupit" Width="100" Content="Koupit" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Koupit_Click" ></Button>
     </Grid>
 </Page>

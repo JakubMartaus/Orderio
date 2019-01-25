@@ -36,7 +36,7 @@ namespace Orderio
         {
             // Vytvoření klienta
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Post, "https://student.sps-prosek.cz/~martaja15/Files/API/api.php");
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://orderio.czech-trip-transport.com/api.php");
             // Data, která se přidají k POST dotazu -> klíč je typu string a data jsou typu string
             var keyValues = new List<KeyValuePair<string, string>>();
             keyValues.Add(new KeyValuePair<string, string>("Username", Username));

@@ -21,6 +21,8 @@ namespace Orderio
     /// </summary>
     public partial class LoginPage : Page
     {
+        private string userID;
+        private string Username;
         public LoginPage()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace Orderio
         {
             HttpClient client = new HttpClient();
 
-            var response = await client.GetAsync("https://student.sps-prosek.cz/~martaja15/Files/API/api.php");
+            var response = await client.GetAsync("http://orderio.czech-trip-transport.com/api.php");
 
             string json = await response.Content.ReadAsStringAsync();
             //dynamic c = JsonConvert.DeserializeObject(json);
@@ -56,6 +58,12 @@ namespace Orderio
                 listView.Items.Add(api);*/
                 if(username.Text == c[i].Username && password.Password == c[i].Password)
                 {
+                    //  Objects.testik t = new Objects.testik(c[i].ID);
+                    userID = c[i].ID;
+                    ShopPage shoppage = new ShopPage(userID);
+                    
+
+                    
                     this.NavigationService.Navigate(new UserPage());
                 }
                 else

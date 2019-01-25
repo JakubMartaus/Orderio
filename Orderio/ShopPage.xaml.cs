@@ -21,16 +21,36 @@ namespace Orderio
     /// </summary>
     public partial class ShopPage : Page
     {
+
+        public int userIDcko = 1;
+        
+
+        Objects.testik t = new Objects.testik();
+        //public string userID = "1";
         public ShopPage()
         {
             InitializeComponent();
             Get();
+        
         }
+        public string User;
+        public ShopPage(string userID) : this()
+        {
+            int x = Convert.ToInt32(userID);
+            //   t.User_id = idcko;
+            if (userIDcko < x) {
+                userIDcko++;
+            }
+
+        }
+
+
+        
         public async void Get()
         {
             HttpClient client = new HttpClient();
 
-            var response = await client.GetAsync("https://student.sps-prosek.cz/~martaja15/Files/API/produkt.php");
+            var response = await client.GetAsync("http://orderio.czech-trip-transport.com/produkt.php");
 
             string json = await response.Content.ReadAsStringAsync();
             //dynamic c = JsonConvert.DeserializeObject(json);
@@ -52,6 +72,69 @@ namespace Orderio
 
             }
 
+
+        }
+
+      
+        Objects.Product test;
+
+
+        public async void Send()
+        {
+            // Vytvoření klienta
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://orderio.czech-trip-transport.com/produkt.php");
+            // Data, která se přidají k POST dotazu -> klíč je typu string a data jsou typu string
+            var keyValues = new List<KeyValuePair<string, string>>();
+            keyValues.Add(new KeyValuePair<string, string>("Name", test.Name));
+            keyValues.Add(new KeyValuePair<string, string>("Price", test.Price));
+            keyValues.Add(new KeyValuePair<string, string>("userID", userIDcko.ToString()));
+           
+            // Přidání dat do dotazu
+            request.Content = new FormUrlEncodedContent(keyValues);
+            // Zaslání POST dotazu
+            var response = await client.SendAsync(request);
+            // Získání odpovědi
+            string responseContent = await response.Content.ReadAsStringAsync();
+        }
+        private void ProduktList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+            test = (Objects.Product)ProduktList.SelectedItem;
+
+            /*product.Name = test.Name;
+            product.Price = test.Price;*/
+
+            SkladList.Items.Add(test);
+            // Sklad
+            Send();
+
+
+
+        }
+        public async void Send2()
+        {
+            var client = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Post, "http://orderio.czech-trip-transport.com/produkt.php");
+            // Data, která se přidají k POST dotazu -> klíč je typu string a data jsou typu string
+            var keyValues = new List<KeyValuePair<string, string>>();
+            keyValues.Add(new KeyValuePair<string, string>("Name", test.Name));
+            keyValues.Add(new KeyValuePair<string, string>("Price", test.Price));
+            keyValues.Add(new KeyValuePair<string, string>("Overeni", "post"));
+            // Přidání dat do dotazu
+            request.Content = new FormUrlEncodedContent(keyValues);
+            // Zaslání POST dotazu
+            var response = await client.SendAsync(request);
+            // Získání odpovědi
+            string responseContent = await response.Content.ReadAsStringAsync();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new UserPage());
+        }
+
+        private void Koupit_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

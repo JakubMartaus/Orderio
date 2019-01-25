@@ -30,10 +30,11 @@
 
 
         <Button
+            x:Name="Objednavky"
                 Style="{StaticResource MaterialDesignRaisedAccentButton}"
                 Width="350"
                 ToolTip="Resource name: MaterialDesignRaisedAccentButton"
-                Cursor="Hand" Grid.Row="1"  Grid.Column="0" Height="150"   FontSize="34"  Foreground="White" FontFamily="Myriad Pro" Click="Button_Click">
+                Cursor="Hand" Grid.Row="1"  Grid.Column="0" Height="150"   FontSize="34"  Foreground="White" FontFamily="Myriad Pro" Click="Objednavky_Click" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
